@@ -21,9 +21,6 @@ protocol  Plus{
 
 extension Double:Plus{
 
-//    static func +(s: Double , e: Double) {
-//        return s + e
-//    }
 }
 
 func changeValue<T: Plus>(value: T, a: Double ) {
@@ -72,11 +69,9 @@ protocol ArrrayMultiply {
  static func *(l: Self,  r: Self) -> Self
 }
 
+
 extension Int: ArrrayMultiply {
     
-    static func *(l: [Int],  r: Int) -> Int {
-        return l * r
-    }
 }
 
 func changeArrayValue<T: ArrrayMultiply>(arr:[T], a:T) -> [T] {
@@ -103,9 +98,6 @@ protocol ArrrayAmount {
 
 extension Int: ArrrayAmount {
     
-    static func +(l: [Int],  r: Int) -> Int {
-        return l + r
-    }
 }
 
 func changeArrayValueAmount<T: ArrrayAmount>(arr:[T], a:T) -> [T] {
